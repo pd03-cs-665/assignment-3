@@ -10,6 +10,13 @@
 
 Please add a paragraph or two overviewing the objectives of the assignment.
 
+## Prerequisites
+
+This project requires:
+
+- Java 25 JDK
+- Apache Maven 3.9 or newer
+
 # GitHub Repository Link
 
 https://github.com/pd03-cs-665/cs-665-assignment-{ASSIGNMENT_NUMBER}

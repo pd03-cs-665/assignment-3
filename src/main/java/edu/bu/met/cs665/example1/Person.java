@@ -18,94 +18,94 @@ import java.util.Objects;
  */
 public class Person {
 
-  private String firstName;
-  private String lastName;
-  private final LocalDate birthday;
+    private String firstName;
+    private String lastName;
+    private final LocalDate birthday;
 
-  /**
-   * Create a Person object using first and last name.
-   *
-   * @param firstName firstname of the person as string
-   * @param lastName  lastname of the person as string
-   */
-  public Person(String firstName, String lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthday = null;
-  }
-
-  /**
-   * Create a Person object using first name, last name, and birthday.
-   *
-   * @param firstName firstname of the person as string
-   * @param lastName  lastname of the person as string
-   * @param birthday  date of birth
-   */
-  public Person(String firstName, String lastName, LocalDate birthday) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthday = Objects.requireNonNull(birthday, "birthday");
-  }
-
-  /**
-   * Get this person's age as of today.
-   *
-   * @return the person's age in whole years
-   */
-  public int getAge() {
-    return getAge(LocalDate.now());
-  }
-
-  /**
-   * Get this person's age as of a specified date.
-   *
-   * @param asOfDate date on which to calculate the person's age
-   * @return the person's age in whole years
-   */
-  public int getAge(LocalDate asOfDate) {
-    Objects.requireNonNull(asOfDate, "asOfDate");
-    if (birthday == null) {
-      throw new IllegalStateException("Cannot calculate age without a birthday.");
+    /**
+     * Create a Person object using first and last name.
+     *
+     * @param firstName firstname of the person as string
+     * @param lastName  lastname of the person as string
+     */
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = null;
     }
-    if (asOfDate.isBefore(birthday)) {
-      throw new IllegalArgumentException(
-          "The date of age calculation cannot precede the birthday.");
+
+    /**
+     * Create a Person object using first name, last name, and birthday.
+     *
+     * @param firstName firstname of the person as string
+     * @param lastName  lastname of the person as string
+     * @param birthday  date of birth
+     */
+    public Person(String firstName, String lastName, LocalDate birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = Objects.requireNonNull(birthday, "birthday");
     }
-    return Period.between(birthday, asOfDate).getYears();
-  }
 
-  /*
-   * Getter method for first name.
-   */
-  public String getFirstName() {
-    return firstName;
-  }
+    /**
+     * Get this person's age as of today.
+     *
+     * @return the person's age in whole years
+     */
+    public int getAge() {
+        return getAge(LocalDate.now());
+    }
 
-  /**
-   * Setter method for first name string.
-   *
-   * @param firstName first name of a person
-   */
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    /**
+     * Get this person's age as of a specified date.
+     *
+     * @param asOfDate date on which to calculate the person's age
+     * @return the person's age in whole years
+     */
+    public int getAge(LocalDate asOfDate) {
+        Objects.requireNonNull(asOfDate, "asOfDate");
+        if (birthday == null) {
+            throw new IllegalStateException("Cannot calculate age without a birthday.");
+        }
+        if (asOfDate.isBefore(birthday)) {
+            throw new IllegalArgumentException(
+                "The date of age calculation cannot precede the birthday.");
+        }
+        return Period.between(birthday, asOfDate).getYears();
+    }
 
-  /**
-   * Getter method for Person's lastName.
-   *
-   * @return The last name of this Person.
-   */
-  public String getLastName() {
-    return lastName;
-  }
+    /*
+    * Getter method for first name.
+    */
+    public String getFirstName() {
+        return firstName;
+    }
 
-  /**
-   * Setter method for Person's lastName.
-   *
-   * @param lastName The last name to assign to this person.
-   */
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    /**
+     * Setter method for first name string.
+     *
+     * @param firstName first name of a person
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * Getter method for Person's lastName.
+     *
+     * @return The last name of this Person.
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * Setter method for Person's lastName.
+     *
+     * @param lastName The last name to assign to this person.
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
 }
