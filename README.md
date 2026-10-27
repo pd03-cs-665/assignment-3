@@ -53,7 +53,7 @@ mvn clean test
 ## Spotbugs 
 
 ```bash
-mvn spotbugs:gui 
+mvn spotbugs:gui
 ```
 
 ## Checkstyle 
