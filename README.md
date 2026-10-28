@@ -2,9 +2,9 @@
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
 | Name         | Laya Dang                  |
-| Date         | MM/DD/YYYY                 |
+| Date         | 11/03/2026                 |
 | Course       | Fall 2026                  |
-| Assignment # | TBD                        |
+| Assignment # | 3.                         |
 
 # Assignment Overview
 
