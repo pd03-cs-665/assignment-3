@@ -8,13 +8,12 @@
 
 package edu.bu.met.cs665;
 
-import java.util.Scanner;
-
 import edu.bu.met.cs665.strategy.BusinessEmailStrategy;
-import edu.bu.met.cs665.strategy.ReturningEmailStrategy;
 import edu.bu.met.cs665.strategy.FrequentEmailStrategy;
 import edu.bu.met.cs665.strategy.NewEmailStrategy;
+import edu.bu.met.cs665.strategy.ReturningEmailStrategy;
 import edu.bu.met.cs665.strategy.VipEmailStrategy;
+import java.util.Scanner;
 
 public class Main {
 
@@ -24,11 +23,11 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("──────────────── ⋆⋅☆⋅⋆ ────────────────");
         System.out.println("       LAYA'S EMAIL GENERATION APP      ");
         System.out.println("──────────────── ⋆⋅☆⋅⋆ ────────────────");
+
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("\nSelect a customer type:");
