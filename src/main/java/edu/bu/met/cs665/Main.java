@@ -11,10 +11,15 @@ package edu.bu.met.cs665;
 import edu.bu.met.cs665.strategy.BusinessEmailStrategy;
 
 public class Main {
+
+    /**
+     * Main entry point of program.
+     * @param args command line args (expects none).
+     */
     public static void main(String[] args) {
         EmailGenerator generator = new EmailGenerator(new BusinessEmailStrategy());
 
-        generator.generateEmail("Carl", "We've gone bankrupt!");
+        generator.generateEmail("john", "hello!");
     }
 
 }
