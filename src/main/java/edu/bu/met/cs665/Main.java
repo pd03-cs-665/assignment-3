@@ -1,31 +1,20 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: Laya Dang
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 11/03/2026
  * File Name: Main.java
- * Description: Demonstrates basic Log4j logging.
+ * Description: Entry point for email generator program.
  */
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.factory.BusinessEmailFactory;
-import edu.bu.met.cs665.factory.FrequentEmailFactory;
-import edu.bu.met.cs665.factory.NewEmailFactory;
-import edu.bu.met.cs665.factory.ReturningEmailFactory;
-import edu.bu.met.cs665.factory.VipEmailFactory;
+import edu.bu.met.cs665.strategy.BusinessEmailStrategy;
 
 public class Main {
     public static void main(String[] args) {
-        EmailGenerator businessEmailGenerator = new EmailGenerator(new BusinessEmailFactory());
+        EmailGenerator generator = new EmailGenerator(new BusinessEmailStrategy());
 
-        EmailGenerator returningEmailGenerator = new EmailGenerator(new ReturningEmailFactory());
-
-        EmailGenerator frequentEmailGenerator = new EmailGenerator(new FrequentEmailFactory());
-
-        EmailGenerator newEmailGenerator = new EmailGenerator(new NewEmailFactory());
-
-        EmailGenerator vipEmailGenerator = new EmailGenerator(new VipEmailFactory());
-
+        generator.generateEmail("Carl", "We've gone bankrupt!");
     }
 
 }
