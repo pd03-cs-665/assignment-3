@@ -30,8 +30,6 @@ public class ReturningEmailStrategy implements EmailStrategy {
                 Laya's Legit LLC
                 """.formatted(name, message);
 
-        System.out.println(emailContent);
-
         return emailContent;
     }
 }
