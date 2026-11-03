@@ -13,7 +13,7 @@ public class EmailGenerator {
         this.emailStrategy = emailStrategy;
     }
 
-    public void generateEmail(String name, String body) {
-        emailStrategy.generateEmail(name, body);
+    public String generateEmail(String name, String body) {
+        return emailStrategy.generateEmail(name, body);
     }
 }

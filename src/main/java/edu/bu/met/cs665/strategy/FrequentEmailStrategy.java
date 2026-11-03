@@ -2,7 +2,7 @@ package edu.bu.met.cs665.strategy;
 
 public class FrequentEmailStrategy implements EmailStrategy {
     @Override
-    public void generateEmail(String name, String message) {
+    public String generateEmail(String name, String message) {
         String emailContent = """
                 Dear %s,
 
@@ -16,6 +16,6 @@ public class FrequentEmailStrategy implements EmailStrategy {
                 Laya's Legit LLC
                 """.formatted(name, message);
 
-        System.out.println(emailContent);
+        return emailContent;
     }
 }

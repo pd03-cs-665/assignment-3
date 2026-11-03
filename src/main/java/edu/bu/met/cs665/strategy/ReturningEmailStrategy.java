@@ -1,8 +1,8 @@
 package edu.bu.met.cs665.strategy;
 
-public class ReturningStrategyEmail implements EmailStrategy {
+public class ReturningEmailStrategy implements EmailStrategy {
     @Override
-    public void generateEmail(String name, String message) {
+    public String generateEmail(String name, String message) {
         String emailContent = """
                 Dear %s,
 
@@ -18,5 +18,6 @@ public class ReturningStrategyEmail implements EmailStrategy {
 
         System.out.println(emailContent);
 
+        return emailContent;
     }
 }
